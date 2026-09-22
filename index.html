@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Corner</title>
+ 
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+ 
+<!-- EXTERNAL CSS -->
+<link rel="stylesheet" href="style.css">
+ 
+<!-- INTERNAL CSS -->
+<style>
+  /* Internal CSS: About heading + footer */
+  .about-heading {
+    font-size: 30px;
+    color: #8a3b12;
+    letter-spacing: 1px;
+  }
+ 
+  footer {
+    background-color: #201209;
+    color: whitesmoke;
+    text-align: center;
+    padding: 34px 20px 22px;
+  }
+ 
+  /* Cascade / source-order demo: same specificity, later rule wins */
+  .note { color: blue; }
+  .note { color: #2f7d32; }
+</style>
+</head>
+<body>
+ 
+<!-- ===================== HEADER ===================== -->
+<header id="main-header">
+  <h1 class="site-title">Food Corner</h1>
+ 
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+ 
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+<!-- ===================== WELCOME SECTION ===================== -->
+<section id="home" class="welcome-section">
+  <div class="welcome-content reveal">
+    <h2>Welcome to Food Corner</h2>
+    <!-- INLINE CSS example -->
+    <p style="font-style: italic; color: rgb(255, 235, 205);">
+      Fresh ingredients, bold flavors, and a corner table always waiting for you.
+    </p>
+    <a href="#menu" class="btn explore-btn">Explore Menu</a>
+  </div>
+</section>
+ 
+<!-- ===================== MENU SECTION ===================== -->
+<section id="menu" class="menu-section">
+  <h2 class="section-heading reveal">Our Menu</h2>
+ 
+  <div class="card-container">
+ 
+    <!-- Card 1: Pizza -->
+    <div class="food-card reveal" data-category="italian">
+      <div class="food-img-wrap">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Pizza" class="food-img">
+      </div>
+      <h3>Pizza</h3>
+      <p>Wood-fired crust topped with mozzarella, basil, and a rich tomato sauce.</p>
+      <p class="price">Rs:1500</p>
+      <button class="btn order-btn">Order Now</button>
+    </div>
+ 
+    <!-- Card 2: Burger -->
+    <div class="food-card reveal" data-category="fast-food">
+      <div class="food-img-wrap">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop" alt="Burger" class="food-img">
+      </div>
+      <h3>Burger</h3>
+      <p>Juicy grilled patty with cheese, lettuce, and our signature sauce.</p>
+      <p class="price">Rs:400</p>
+      <button class="btn order-btn">Order Now</button>
+    </div>
+ 
+    <!-- Card 3: Sandwich -->
+    <div class="food-card reveal" data-category="light">
+      <div class="food-img-wrap">
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=800&auto=format&fit=crop" alt="Sandwich" class="food-img">
+      </div>
+      <h3>Sandwich</h3>
+      <p>Toasted bread layered with fresh veggies, cheese, and ham.</p>
+      <p class="price">Rs:250</p>
+      <button class="btn order-btn">Order Now</button>
+    </div>
+ 
+    <!-- Card 4: Pasta -->
+<div class="food-card reveal" data-category="italian">
+  <div class="food-img-wrap">
+    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop" alt="Pasta" class="food-img">
+  </div>
+  <h3>Pasta</h3>
+  <p>Creamy Alfredo pasta tossed with herbs and parmesan.</p>
+  <p class="price">Rs:600</p>
+  <button class="btn order-btn">Order Now</button>
+</div>
+ 
+<!-- ===================== ABOUT SECTION ===================== -->
+<section id="about" class="about-section">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <h2 class="about-heading">About Us</h2>
+      <p>
+        Food Corner started as a small family kitchen and grew into a cozy
+        neighborhood restaurant loved for its handmade recipes. We believe
+        great food brings people together, so every dish on our menu is
+        prepared fresh daily using locally sourced ingredients and a whole
+        lot of care.
+      </p>
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Years Serving</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">40+</span>
+          <span class="stat-label">Dishes</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">5k+</span>
+          <span class="stat-label">Happy Guests</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Restaurant Interior">
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== CONTACT SECTION ===================== -->
+<section id="contact" class="contact-section">
+  <h2 class="reveal">Contact Us</h2>
+  <form class="contact-form reveal" id="contactForm">
+    <div class="field">
+      <input type="text" id="name" name="name" placeholder=" " required>
+      <label for="name">Name</label>
+    </div>
+ 
+    <div class="field">
+      <input type="email" id="email" name="email" placeholder=" " required>
+      <label for="email">Email</label>
+    </div>
+ 
+    <div class="field">
+      <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+      <label for="message">Message</label>
+    </div>
+ 
+    <button type="submit" class="btn submit-btn">Send Message</button>
+  </form>
+ 
+  <p class="form-success" id="formSuccess">Thanks! Your message has been sent.</p>
+</section>
+ 
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p class="footer-title">Food Corner</p>
+  <p>&copy; 2026 Food Corner. All rights reserved.</p>
+</footer>
+ 
+<!-- Back to top -->
+<button id="backToTop" aria-label="Back to top">&uarr;</button>
+ 
+<script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+    });
+  });
+ 
+  // Header shadow + active link highlight on scroll
+  const header = document.getElementById('main-header');
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav-link');
+ 
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+ 
+    let current = '';
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 90;
+      if (window.scrollY >= top) current = sec.id;
+    });
+    links.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+ 
+    document.getElementById('backToTop').classList.toggle('show', window.scrollY > 400);
+  });
+ 
+  // Scroll-reveal animation
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+ 
+  // Contact form (front-end only demo)
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    success.classList.add('show');
+    form.reset();
+    setTimeout(() => success.classList.remove('show'), 3500);
+  });
+ 
+  // Back to top
+  document.getElementById('backToTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+ 
+</body>
+</html>
